@@ -1,0 +1,95 @@
+body {
+	background: #141414;
+	color: #ffffff;
+}
+
+::-webkit-scrollbar {
+	width: 15px; 
+	height: 8px; 
+	background-color: #242424;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+	background-color: #3f3d3e;
+	border-radius: 9em;
+	box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #253861;
+}
+
+/* Стрелки */
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+	background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+	linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+	linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+	background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+	background:
+			linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+			linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+			linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+	background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+	background:
+			linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+			linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+			linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+	background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+	background:
+			linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+			linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+			linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+	background-color: #f6f8f4;
+}
+
+.movie-app > .row {
+	overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.image-container {
+	position: relative;
+	transition: transform 1s;
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+}
+
+.list {
+	padding: 15px;
+	height: 500px;
+	align-items: center;
+}
+
+.list > .item {
+	height: 450px;
+}
